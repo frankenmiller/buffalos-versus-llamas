@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
-  let Fart = new Audio("/fart.wav");
+  let Fart = new Audio("/sounds/fart.wav");
+
   const start = () => {
     Fart.play()
   }
@@ -23,7 +24,7 @@ export default function Board() {
   const [darkMode, setDarkMode] = useState(true);
   const [inChinese, setInChinese] = useState(true);
   const winner = calculateWinner(squares);
-  let Bleep = new Audio("/bleep.wav");
+  let Bleep = new Audio("/sounds/bleep.wav");
   let status;
   let loser;
   let linkedin;
@@ -72,7 +73,7 @@ export default function Board() {
       linkedin = (XisNext ? "🧑🏽‍💻 Let's hang out and BUIDL" : "linkedin.com/in/frankenmiller");
       github = (XisNext ? "https://github.com/frankenmiller" : "🧑🏽‍💻 I want to be on your team!")    
     }
-  } else {
+  } else { // when in case still no winner...
     if (inChinese) {
       status = "下位动物: " + (XisNext ? "🦬" : "🦙");
       loser = "战斗战斗啊!";
