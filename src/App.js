@@ -1,9 +1,18 @@
 import { useState } from "react";
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
+  let Fart = new Audio("/sounds/fart.wav");
+
+  const start = () => {
+    Fart.play()
+  }
   return (
     <button className="square"
-      onClick={onSquareClick}> {value}
+    onClick={() =>{
+      start();
+      onSquareClick();
+    }}
+    > {value}
     </button>
   );
 } // <!------------------------------------------------------------ Square()
@@ -15,6 +24,7 @@ export default function Board() {
   const [darkMode, setDarkMode] = useState(true);
   const [inChinese, setInChinese] = useState(true);
   const winner = calculateWinner(squares);
+  let Bleep = new Audio("/sounds/bleep.wav");
   let status;
   let loser;
   let linkedin;
@@ -24,6 +34,10 @@ export default function Board() {
   let instructLineThree;
   let instructLineFour;
   let bufficornBrigade;
+  
+  const start = () => {
+    Bleep.play()
+  }
 
   function handleClick(i) {
     // <!----------------------------- handleClick()
@@ -59,7 +73,7 @@ export default function Board() {
       linkedin = (XisNext ? "🧑🏽‍💻 Let's hang out and BUIDL" : "linkedin.com/in/frankenmiller");
       github = (XisNext ? "https://github.com/frankenmiller" : "🧑🏽‍💻 I want to be on your team!")    
     }
-  } else {
+  } else { // when in case still no winner...
     if (inChinese) {
       status = "下位动物: " + (XisNext ? "🦬" : "🦙");
       loser = "战斗战斗啊!";
@@ -95,9 +109,7 @@ export default function Board() {
       <div className="dark-mode-container">
         <div>
         <label className="switch">
-        <input type="checkbox" 
-        onChange={() => setDarkMode(!darkMode)}
-        />
+        <input type="checkbox" />
         </label>
         </div>
         <span></span>
@@ -107,7 +119,11 @@ export default function Board() {
         <div className="switch-checkbox">
         <label className="switch">
         <input type="checkbox" 
-        onChange={() => setDarkMode(!darkMode)}
+        onChange={() => {
+          setDarkMode(!darkMode);
+          start();
+          }
+        } 
         />
         <span className="slider round"> </span>
         </label>
@@ -167,7 +183,11 @@ export default function Board() {
         <div className="switch-checkbox">
         <label className="switch">
         <input type="checkbox" 
-        onChange={() => setInChinese(!inChinese)}
+        onChange={() => {
+          setInChinese(!inChinese);
+          start();
+          } 
+        }
         />
         <span className="slider round"> </span>
         </label>
