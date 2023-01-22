@@ -2,17 +2,16 @@ import { useState } from "react";
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
   let Fart = new Audio("/fart.wav");
-
   const start = () => {
     Fart.play()
   }
   return (
     <button className="square"
-      onClick={() =>{
-        start();
-        onSquareClick();
-      }}
-      > {value}
+    onClick={() =>{
+      start();
+      onSquareClick();
+    }}
+    > {value}
     </button>
   );
 } // <!------------------------------------------------------------ Square()
@@ -24,6 +23,7 @@ export default function Board() {
   const [darkMode, setDarkMode] = useState(true);
   const [inChinese, setInChinese] = useState(true);
   const winner = calculateWinner(squares);
+  let Bleep = new Audio("/bleep.wav");
   let status;
   let loser;
   let linkedin;
@@ -33,6 +33,10 @@ export default function Board() {
   let instructLineThree;
   let instructLineFour;
   let bufficornBrigade;
+  
+  const start = () => {
+    Bleep.play()
+  }
 
   function handleClick(i) {
     // <!----------------------------- handleClick()
@@ -104,9 +108,7 @@ export default function Board() {
       <div className="dark-mode-container">
         <div>
         <label className="switch">
-        <input type="checkbox" 
-        onChange={() => setDarkMode(!darkMode)}
-        />
+        <input type="checkbox" />
         </label>
         </div>
         <span></span>
@@ -116,7 +118,11 @@ export default function Board() {
         <div className="switch-checkbox">
         <label className="switch">
         <input type="checkbox" 
-        onChange={() => setDarkMode(!darkMode)}
+        onChange={() => {
+          setDarkMode(!darkMode);
+          start();
+          }
+        } 
         />
         <span className="slider round"> </span>
         </label>
@@ -176,7 +182,11 @@ export default function Board() {
         <div className="switch-checkbox">
         <label className="switch">
         <input type="checkbox" 
-        onChange={() => setInChinese(!inChinese)}
+        onChange={() => {
+          setInChinese(!inChinese);
+          start();
+          } 
+        }
         />
         <span className="slider round"> </span>
         </label>
