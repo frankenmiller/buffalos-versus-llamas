@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  transform: translateY(-10px);
+  font-family: sans-serif;
+  padding: 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+body .dark-mode {
+  background: linear-gradient(to top, #252525, #454545);
+}
+
+body .light-mode {
+  background: linear-gradient(to top, #656565, #959595);
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+}
+
+p {
+  font-weight: bold;
+  width: 350px;
+  font-size: 20px;
+  text-align: center;
+  word-wrap: normal;
+  margin-left: 50%;
+  transform: translate(-180px, -60px);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+p.light-mode {
+  color: #fff;
+  background: #000;
+  border: 3px solid #fff;
+}
+
+p.dark-mode {
+  color: #000;
+  background: #858585;
+  border: 3px solid #000;
+}
+
+.bufficorns {
+  margin-left: 50%;
+  position: relative;
+  font-weight: bold;
+  -webkit-transition: .4s;
+  transition: .4s;  
+  text-align: center;
+  transform: translate(-180px, -80px);
+  width: 350px;
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bufficorns.dark-mode {
+  color: #fff;
+  background-color: #000;
+  border: 3px white solid;
+}
+
+.bufficorns.light-mode {
+  color: #000;
+  border: 3px #000 solid;
+  background-color: #858585;
+}
+
+.status {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  -webkit-transition: .4s;
+  transition: .4s;  
+}
+
+#status_chinese {
+  font-size: 22px;
+  transform: translate(-150px, 150px);
+}
+
+#status_english {
+  transform: translate(-160px, 150px);
+  font-size: 20px;
+}
+
+.status.dark-mode {
+  border: #fff 3px solid;
+  background: #000;
+  color: #fff;
+}
+
+.status.light-mode {
+  border: #000 3px solid;
+  background: #858585;
+  color: #000;
+}
+
+.loser_box {
+  position: absolute;
+  text-align: center;
+  padding: 1px;
+  font-weight: bold;
+  -webkit-transition: .4s;
+  transition: .4s;  
+  height: 40px;
+}
+
+#loser_box_chinese {
+  font-size: 25px;
+  transform: translate(-150px, -3px);
+}
+
+#loser_box_english {
+  transform: translate(-160px, -3px);
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+.loser_box.dark-mode {
+  color: #fff;
+  background: #000;
+  border: #fff 3px solid;
+}
+
+.loser_box.light-mode {
+  color: #000;
+  background: #858585;
+  border: #000 3px solid;
+
+}
+
+.english_instructions {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.chinese_instructions {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#line_zero {
+  display: none;
+}
+
+#line_one {
+  transform: translate(-158px, 45px);
+}
+
+#line_first {
+  transform: translate(-153px, 55px);
+}
+
+#line_two {
+  transform: translate(-158px, 68px);
+}
+
+#line_second {
+  transform: translate(-158px, 78px);
+}
+
+#line_three {
+  transform: translate(-155px, 91px);
+}
+
+#line_third {
+  transform: translate(-157px, 101px);
+}
+
+#line_four {
+  transform: translate(-158px, 115px);
+}
+
+.gamebox {
+  width: 199px;
+  height: 198px;
+  margin-left: 50%;
+  transform: translate(-28px, -100px);
+  border: 3px solid #FFF;
+}
+
+.square {
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 65px;
+  height: 65px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 65px;
+  color: #FFF;
+  background: #000;
+  border: 1px solid #FFF;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.footer {
+}
+
+.social_links {
+  text-align: center;
+  font-weight: bold;
+  width: 350px;
+  margin-left: 50%;
+  font-size: 20px;
+  height: 40px;
+  padding-top: 4px;
+  -webkit-transition: .4s;
+  transition: .4s;  
+}
+
+.social_links.light-mode {
+  border: 3px solid #fff;
+  background: #000;
+  color: #fff;
+}
+
+.social_links.dark-mode {
+  border: 3px solid #000;
+  background: #858585;
+  color: #000;
+
+}
+
+#github {
+  transform: translate(-180px, -90px);
+}
+
+#linkedin {
+  transform: translate(-180px, -95px);
+}
+
+#sunandmoon {
+  font-size: 30px;
+}
