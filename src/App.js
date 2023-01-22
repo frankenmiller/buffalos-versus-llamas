@@ -1,9 +1,18 @@
 import { useState } from "react";
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
+  let Fart = new Audio("/fart.wav");
+
+  const start = () => {
+    Fart.play()
+  }
   return (
     <button className="square"
-      onClick={onSquareClick}> {value}
+      onClick={() =>{
+        start();
+        onSquareClick();
+      }}
+      > {value}
     </button>
   );
 } // <!------------------------------------------------------------ Square()
