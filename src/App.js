@@ -162,7 +162,7 @@ export default function Board() {
         <span id="sunandmoon">☀️</span>
       </div >
       <tag className={darkMode ? "dark-mode" : "light-mode"} id="dark-toggle-script">
-      ⬅ ⬅ ⬅ ⬅ ⬅ ⬅ Click here<br/> to toggle night mode on/off!!
+      ⬅ ⬅ ⬅ Click here<br/> to toggle night mode on/off!!
       </tag>
 
       <p className={darkMode ? "dark-mode" : "light-mode"}>
@@ -215,7 +215,7 @@ export default function Board() {
         <div className={darkMode ? "social_links dark-mode" : "social_links light-mode"} id="github">{github}</div>
       </div>  
       <tag className={darkMode ? "dark-mode" : "light-mode"} id="language-toggle-script">
-      Click here 👉🏼 👉🏼 👉🏼 👉🏼 👉🏼 👉🏼 <br/> to toggle from chinese to <br/> english! 简体汉语 ↔️ US-EN
+      Click here to 👉🏼 👉🏼 👉🏼<br/> toggle from chinese to <br/> english! 简体汉语 ↔️ EN
       </tag>      
       <div className="china-container">
         <span class={darkMode ? "dark-mode switch-script" : "light-mode switch-script"}>中文</span>

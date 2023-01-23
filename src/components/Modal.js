@@ -95,7 +95,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                          src={require('./frankenmiller-bufficorn.png')} />
                         <ModalContent>
                             <h1>Bufficorn #659</h1>
-                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain. Indeed, Frankenmiller's Bufficorn is the most awesome of entire Bufficorn BUIDLr<br />  🦬 🦬 🦬 🦬 🦬 🦬 Brigade! 🦬 🦬 🦬 🦬 🦬 🦬</p>
+                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain. Indeed, Frankenmiller's Bufficorn is the most awesome of entire Bufficorn BUIDLr<br />  🦬 🦬 🦬 🦬 🦬 Brigade! 🦬 🦬 🦬 🦬 🦬</p>
                             <buttonone>Make an Offer!</buttonone>
                             <buttontwo>How about trade?</buttontwo>
                         </ModalContent>
