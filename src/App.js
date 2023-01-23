@@ -28,6 +28,7 @@ export default function Board() {
   const [showModal, setShowModal] = useState(false);
   const winner = calculateWinner(squares);
   let Bleep = new Audio("/sounds/bleep.wav");
+  let Explosion = new Audio("/sounds/explosion.mp3");
   let status;
   let loser;
   let linkedin;
@@ -40,6 +41,10 @@ export default function Board() {
   
   const start = () => {
     Bleep.play()
+  }
+  
+  const explode = () => {
+    Explosion.play()
   }
 
   function handleClick(i) {
@@ -229,7 +234,10 @@ export default function Board() {
       </div > 
       <br /><br /><br /><br />
       <Container>
-          <Button className="bufficorn-button" onClick={openModal} >
+          <Button className="bufficorn-button" onClick={() => {
+            explode();
+            openModal();
+          }} >
             Frankenmiller's<br />Bufficorn 🦬
           </Button>
           <Modal showModal={showModal} setShowModal={setShowModal} />
