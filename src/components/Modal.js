@@ -13,8 +13,10 @@ const Background = styled.div`
 `
 
 const ModalWrapper = styled.div`
-    width: 800px;
+    width: 350px;
     height: 500px;
+    margin-left: 50%;
+    transform: translate(-62px, -150px);
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
     background: #FFF;
     color: #000;
@@ -26,9 +28,12 @@ const ModalWrapper = styled.div`
 `
 
 const ModalImg = styled.img`
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 0 0 10px;
+    margin-left: 50%;
+    transform: translate(-100px, -5px);
+    margin-top: 50px;
+    width: 275px;
+    height: 275px;
+    border-radius: 10px 10px 10px 10px;
     background: #000;
 `
 
@@ -39,22 +44,40 @@ const ModalContent = styled.div`
     align-items: center;
     line-height: 1.8;
     color: #141414;
-
-    p {margin-bottom: 1rem;}
-
-    button {
-        padding: 10px 24px;
+    
+    p {
+        transform: translate(-365px, 220px);
+        font-size: 15px;
+        margin-top: 25px;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: 1.2;
+    }
+    
+    buttonone {
+        transform: translate(-365px, 210px);
+        padding: 10px 18px;
         background: #141414;
         color: #FFF;
         border: none;
+        cursor: pointer;
+    }
+    
+    buttontwo {
+        transform: translate(-195px, 162px);
+        padding: 10px 18px;
+        background: #141414;
+        color: #FFF;
+        border: none;
+        cursor: pointer;
     }
 `
 
 const CloseModalButton = styled(MdClose)`
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     width: 32px;
     height: 32px;
     padding: 0px;
@@ -73,8 +96,9 @@ export const Modal = ({ showModal, setShowModal }) => {
                          src={require('./frankenmiller-bufficorn.png')} />
                         <ModalContent>
                             <h1>Bufficorn #659</h1>
-                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain</p>
-                            <button>Make an Offer!</button>
+                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain. Indeed, Frankenmiller's Bufficorn is the most awesome of entire Bufficorn BUIDLr Brigade! 🦬 🦬 🦬</p>
+                            <buttonone>Make an Offer!</buttonone>
+                            <buttontwo>How about trade?</buttontwo>
                         </ModalContent>
                         <CloseModalButton aria-label='Close modal' 
                          onClick={() => setShowModal(prev => ! prev)} />
