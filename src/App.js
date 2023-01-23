@@ -1,6 +1,7 @@
 import { react, useState } from "react";
 import styled from "styled-components";
 import { Modal } from "./components/Modal.js"
+import { GlobalStyle } from "./globalStyles.js";
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
   let Fart = new Audio("/sounds/fart.wav");
@@ -241,6 +242,7 @@ export default function Board() {
             Frankenmiller's<br />Bufficorn 🦬
           </Button>
           <Modal showModal={showModal} setShowModal={setShowModal} />
+          <GlobalStyle />
       </Container>        
     </div>
   );
