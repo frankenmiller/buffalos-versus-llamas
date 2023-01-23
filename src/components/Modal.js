@@ -5,7 +5,7 @@ import { MdClose } from 'react-icons/md';
 const Background = styled.div`
     width: 100%;
     height: 100%;
-    background: rgba(25, 25, 25);
+    background: transparent;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -13,10 +13,9 @@ const Background = styled.div`
 `
 
 const ModalWrapper = styled.div`
-    width: 350px;
+    width: 354px;
     height: 500px;
-    margin-left: 50%;
-    transform: translate(-62px, -150px);
+    transform: translate(calc(-50% + 270px), -170px);
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
     background: #FFF;
     color: #000;
@@ -96,7 +95,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                          src={require('./frankenmiller-bufficorn.png')} />
                         <ModalContent>
                             <h1>Bufficorn #659</h1>
-                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain. Indeed, Frankenmiller's Bufficorn is the most awesome of entire Bufficorn BUIDLr Brigade! 🦬 🦬 🦬</p>
+                            <p>Features rocket-pack and laser eyes on lunar surface background with laptop in hand validating the blockchain. Indeed, Frankenmiller's Bufficorn is the most awesome of entire Bufficorn BUIDLr<br />  🦬 🦬 🦬 🦬 🦬 🦬 Brigade! 🦬 🦬 🦬 🦬 🦬 🦬</p>
                             <buttonone>Make an Offer!</buttonone>
                             <buttontwo>How about trade?</buttontwo>
                         </ModalContent>
