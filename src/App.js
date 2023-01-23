@@ -239,7 +239,7 @@ export default function Board() {
             explode();
             openModal();
           }} >
-            Frankenmiller's<br />Bufficorn 🦬
+            Frankenmiller's<br />Bufficorn&nbsp;&nbsp;&nbsp;🦬
           </Button>
           <Modal showModal={showModal} setShowModal={setShowModal} />
           <GlobalStyle />
