@@ -273,13 +273,41 @@ p.dark-mode {
 }
 
 #github {
-  transform: translate(-180px, -90px);
+  transform: translate(-180px, -65px);
 }
 
 #linkedin {
-  transform: translate(-180px, -95px);
+  transform: translate(-180px, -70px);
 }
 
 #sunandmoon {
   font-size: 30px;
+}
+
+.bufficorn-button {
+  transform: translate(-12px, 130px);
+}
+
+tag {
+  font-size: 15px;
+  position: absolute;
+  margin-left: 50%;
+  justify-content: center;
+  font-weight: 800;
+}
+
+tag.dark-mode {
+  color: #FFF;
+}
+
+tag.light-mode {
+  color: #000;
+}
+
+#dark-toggle-script {
+  transform: translate(-32px, -82px);
+}
+
+#language-toggle-script {
+  transform: translate(-183.5px, -215px);
 }

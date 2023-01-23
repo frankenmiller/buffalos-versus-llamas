@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { react, useState } from "react";
+import styled from "styled-components";
+import { Modal } from "./components/Modal.js"
 
 function Square({ value, onSquareClick }) { // <!------------------- Square()
   let Fart = new Audio("/sounds/fart.wav");
@@ -23,6 +25,7 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [darkMode, setDarkMode] = useState(true);
   const [inChinese, setInChinese] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const winner = calculateWinner(squares);
   let Bleep = new Audio("/sounds/bleep.wav");
   let status;
@@ -104,6 +107,28 @@ export default function Board() {
     bufficornBrigade = "🦬 Buffaloes vs llamas 🦙";
   }
 
+  const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    transform: translate(-150px, -312px);
+    position: relative;
+    `
+    const Button = styled.button`
+    min-width: 100px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 4px solid #000;
+    background: #141414;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+  `
+  const openModal = () => {
+    setShowModal(prev => !prev)
+  }
+
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
       <div className="dark-mode-container">
@@ -130,6 +155,10 @@ export default function Board() {
         </div>
         <span id="sunandmoon">☀️</span>
       </div >
+      <tag className={darkMode ? "dark-mode" : "light-mode"} id="dark-toggle-script">
+      ⬅ ⬅ ⬅ ⬅ ⬅ ⬅ Click here<br/> to toggle night mode on/off!!
+      </tag>
+
       <p className={darkMode ? "dark-mode" : "light-mode"}>
         {inChinese ? "富蓝克迷拉的井字棋电子游戏" : "Frankenmiller's Tic-Tac-Toe game"}
         <br />
@@ -174,10 +203,14 @@ export default function Board() {
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
         </div>
       </div>
+      <br /><br />
       <div className="footer">
         <div className={darkMode ? "social_links dark-mode" : "social_links light-mode"} id="linkedin">{linkedin}</div>
         <div className={darkMode ? "social_links dark-mode" : "social_links light-mode"} id="github">{github}</div>
-      </div>     
+      </div>  
+      <tag className={darkMode ? "dark-mode" : "light-mode"} id="language-toggle-script">
+      Click here 👉🏼 👉🏼 👉🏼 👉🏼 👉🏼 👉🏼 <br/> to toggle from chinese to <br/> english! 简体汉语 ↔️ US-EN
+      </tag>      
       <div className="china-container">
         <span class={darkMode ? "dark-mode switch-script" : "light-mode switch-script"}>中文</span>
         <div className="switch-checkbox">
@@ -193,7 +226,14 @@ export default function Board() {
         </label>
         </div>
         <span id="usflag">🇺🇸</span>
-      </div >      
+      </div > 
+      <br /><br /><br /><br />
+      <Container>
+          <Button className="bufficorn-button" onClick={openModal} >
+            Frankenmiller's<br />Bufficorn 🦬
+          </Button>
+          <Modal showModal={showModal} setShowModal={setShowModal} />
+      </Container>        
     </div>
   );
 } // <!------------------------------------------------------------- Board()

@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
-  transform: translate(90px, -90px);
+  transform: translate(90px, -215px);
 }
 
 .spare-container {  
@@ -72,7 +72,7 @@ color: #000;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #858585;
+  background-color: darkblue;
   -webkit-transition: .4s;
   transition: .4s;
 }
